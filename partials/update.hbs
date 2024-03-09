@@ -1,0 +1,12 @@
+<div id="inf">
+    <form action="/update" method="post">
+        <input type="text" name="oldFio" id="oldFio" value="{{fio}}" hidden>
+        <input type="text" name="fio" id="fio" value="{{fio}}" onchange="Change()" pattern="[A-Za-zА-Яа-яЁё\s]+" required>
+        <input type="text" name="number" id="number" value="{{number}}" onchange="Change()" pattern="[0-9]{8}" required >
+        <input id="button" type="submit" value="update">
+    </form>
+    <button id="deleteButton" onclick="Delete()">delete</button>
+</div>
+<div id="button">
+    {{#discard}}{{/discard}}
+</div>

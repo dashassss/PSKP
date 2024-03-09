@@ -1,0 +1,19 @@
+{{#if access}}
+    <div id="container">
+        {{#each list}}
+            <div>
+                <a href="/update?fio={{fio}}&number={{number}}">fio: {{fio}} number:{{number}}</a>
+                </br>
+            </div>
+        {{/each}}
+    </div>
+{{else}}
+    <div id="container">
+        {{#each list}}
+            <div>
+                <a>fio: {{fio}}  number:{{number}}</a>
+                </br>
+            </div>
+        {{/each}}
+    </div>
+{{/if}}
