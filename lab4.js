@@ -8,7 +8,7 @@ const handlebars = require("express-handlebars").create({
   partialsDir: "./partials",
   helpers: {
     discard: () => {
-      return '<a href="/"">discard</a>';
+      return '<a id="button" href="/"">discard</a>';
     },
   },
 });
@@ -30,7 +30,6 @@ app.get("/",(req,resp)=>{
     access: true
   })
 })
-
 
 
 const post = (json) => {
@@ -100,8 +99,8 @@ app.get("/delete",(req,resp)=>{
     list: get()
   });
 });
-app.post("/delete",(req,resp)=>{
-  deleteItem(req.body);
+app.post("/delete/:fio",(req,resp)=>{
+  deleteItem(req.params);
   resp.redirect(303,"/");
 });
 

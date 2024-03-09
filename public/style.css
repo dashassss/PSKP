@@ -10,6 +10,7 @@ a {
     width: 150px;
     height: 40px;
     font-size: 15px;
+    border: 1px black solid;
 }
 
 #container {
